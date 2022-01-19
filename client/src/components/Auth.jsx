@@ -22,7 +22,7 @@ const Auth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { userName, phoneNumber, avatarURL, password } = form;
-    const URL = `https://slack-recreation.herokuapp.com/`;
+    const URL = `https://slack-recreation.herokuapp.com/auth`;
     const {
       data: { token, userId, hashedPassword, fullName },
     } = await axios.post(`${URL}/${isSignUp ? "signup" : "login"}`, {
